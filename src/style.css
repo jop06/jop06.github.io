@@ -1,5 +1,16 @@
 body {
     font-family: Calibri;
+    width:800px;    
+    display: table-cell;
+}
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 ul {
