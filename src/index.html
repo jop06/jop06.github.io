@@ -4,8 +4,17 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- <script type="text/javascript" src="singlePageLinks.js"></script> -->
     <script>
+        var content = {
+            "contact": "<p>+421 0915066622</p>" +
+                "<p>josephmatthewparkinson@googlemail.com</p>",
+            "about": "About - lorem ipsum",
+            "logo": "Logo/Home - ipsum lorem",
+            "services":"services: b;las",
+            "references": "references: wrfdw"
+            
+        }
         function setContent(innerContent) {
-            document.getElementById("content").innerHTML = innerContent;
+            document.getElementById("content").innerHTML = content[innerContent];
         }
     </script>
 
