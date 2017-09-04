@@ -1,9 +1,10 @@
 body {
     font-family: Calibri;
-    max-width: 800px;
+    width:800px;
     display: table-cell;
 }
-html, body {
+html {    
+    max-width: 800px;
     height: 100%;
 }
 
@@ -12,8 +13,15 @@ html {
     margin-left: auto;
     margin-right: auto;
 }
+nav {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 70px;
+    font-size: 32px;
+    font-kerning:
+}
 
-ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -21,11 +29,11 @@ ul {
     background-color: #333;
 }
 
-li {
+nav li {
     float: left;
 }
 
-li a {
+nav li a {
     display: block;
     color: white;
     text-align: center;
@@ -34,7 +42,13 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+nav li a:hover {
     background-color: #111;
     cursor: pointer; cursor: hand;
+}
+
+article {
+    padding-left: 50px;
+    padding-right:50px;
+    padding-top:50px;
 }
