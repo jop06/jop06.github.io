@@ -1,16 +1,17 @@
 <html>
 
 <head>
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- <script type="text/javascript" src="singlePageLinks.js"></script> -->
     <script>
         var content = {
             "contact": "<p>+421 0915066622</p>" +
                 "<p>josephmatthewparkinson@googlemail.com</p>",
-            "about": "About - lorem ipsum",
-            "logo": "Logo/Home - ipsum lorem",
-            "services":"services: b;las",
-            "references": "references: wrfdw"
+            "about": "<p>About - lorem ipsum</p>",
+            "logo": "<p>Logo/Home - ipsum lorem</p>",
+            "services":"<p>services: b;las</p>",
+            "references": "<p>references: wrfdw</p>"
             
         }
         function setContent(innerContent) {
@@ -25,35 +26,35 @@
         <ul>
             <li>
                 <a onclick=setContent('logo')>
-                    <div id=logo><img src="./images/dummytitle.png" alt="JPEnglish" width=200px> </div>
+                    <div id=logo><img src="./images/dummytitle2.png" alt="JPEnglish" height=70px> </div>
                 </a>
             </li>
             <li>
                 <a onclick=setContent('about')>
-                    <div id=about>about </div>
+                    <div id=about>ABOUT </div>
                 </a>
             </li>
             <li>
                 <a onclick=setContent('services')>
-                    <div id=services>services </div>
+                    <div id=services>SERVICES </div>
                 </a>
             </li>
             <li>
                 <a onclick=setContent('references')>
-                    <div id=references>references </div>
+                    <div id=references>REFERENCES </div>
                 </a>
             </li>
             <li>
                 <a onclick=setContent('contact')>
-                    <div id=contact>contact </div>
+                    <div id=contact>CONTACT </div>
                 </a>
             </li>
         </ul>
     </nav>
-    <article id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <article id="content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
         aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </article>
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> </article>
 </body>
 
 </html>
