@@ -4,21 +4,6 @@
     <!-- <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- <script type="text/javascript" src="singlePageLinks.js"></script> -->
-    <script>
-        var content = {
-            "contact": "<p>+421 0915066622</p>" +
-                "<p>josephmatthewparkinson@googlemail.com</p>",
-            "about": "<p>About - lorem ipsum</p>",
-            "logo": "<p>Logo/Home - ipsum lorem</p>",
-            "services":"<p>services: b;las</p>",
-            "references": "<p>references: wrfdw</p>"
-            
-        }
-        function setContent(innerContent) {
-            document.getElementById("content").innerHTML = content[innerContent];
-        }
-    </script>
-
 </head>
 
 <body>
@@ -51,10 +36,23 @@
             </li>
         </ul>
     </nav>
-    <article id="content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> </article>
+    <article id="content"></article>
 </body>
-
 </html>
+
+<script>
+    var content = {
+        "contact": "<p>+421 0915066622</p>" +
+            "<p>josephmatthewparkinson@googlemail.com</p>",
+        "about": "<p>About - lorem ipsum</p>",
+        "logo": "<p>Logo/Home - ipsum lorem</p>",
+        "services":"<p>services: b;las</p>",
+        "references": "<p>references: wrfdw</p>",
+        "company classes": "<p>company classes - blah blah</p>"
+        
+    }
+    function setContent(innerContent) {
+        document.getElementById("content").innerHTML = content[innerContent];
+    }
+    setContent('about');
+</script>
