@@ -7,52 +7,77 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
+    <nav id=nav-bar>
+        <ul >
             <li>
-                <a onclick=setContent('logo')>
+                <a onclick="setContent('logo')">
                     <div id=logo><img src="./images/Joe_logo_CMYK.jpg" alt="enjoe" height=70px> </div>
                 </a>
             </li>
             <li>
-                <a onclick=setContent('about')>
+                <a onclick="setContent('about')">
                     <div id=about>ABOUT </div>
                 </a>
             </li>
             <li>
                 
-                <a onclick=setContent('companyclasses')>
+                <a onclick="setContent('companyclasses')">
                     <div id=company>COMPANY CLASSES </div>
                 </a>
             </li>
             <li>
-                <a onclick=setContent('references')>
+                <a onclick="setContent('references')">
                     <div id=references>REFERENCES </div>
                 </a>
             </li>
             <li>
-                <a onclick=setContent('contact')>
+                <a onclick="setContent('contact')">
                     <div id=contact>CONTACT </div>
                 </a>
             </li>
         </ul>
     </nav>
+    <div id=langToggle>
+        <a onclick="setLanguage('en')"> EN</a>
+        /
+        <a onclick="setLanguage('sk')"> SK</a>
+    </div>
     <article id="content"></article>
 </body>
 </html>
 
 <script>
-    var content = {
+    var currentPage="about"
+    var lang ="en";
+    var contentEN = {
         "contact": "<p>+421 0915066622</p>" +
             "<p>mail@enjoe.sk</p>",
-        "about": "<p>About - lorem ipsum</p>",
-        "logo": "<p>Logo/Home - ipsum lorem</p>",
-        "references": "<p>references: wrfdw</p>",
-        "companyclasses": "<p>company classes - blah blah</p>"
+        "about": "<p>EN About - lorem ipsum</p>",
+        "logo": "<p>EN Logo/Home - ipsum lorem</p>",
+        "references": "<p>EN references: wrfdw</p>",
+        "companyclasses": "<p>EN company classes - blah blah</p>"
         
     }
+    var contentSK = {
+        "contact": "<p>+421 0915066622</p>" +
+            "<p>mail@enjoe.sk</p>",
+        "about": "<p>SK About - lorem ipsum</p>",
+        "logo": "<p>SK Logo/Home - ipsum lorem</p>",
+        "references": "SK <p>references: wrfdw</p>",
+        "companyclasses": "<p>SK company classes - blah blah</p>"
+        
+    }
+    content = {
+        "en": contentEN,
+        "sk": contentSK
+    }
     function setContent(innerContent) {
-        document.getElementById("content").innerHTML = content[innerContent];
+        currentPage = innerContent
+        document.getElementById("content").innerHTML = content[lang][innerContent];
+    }
+    function setLanguage(language){
+        lang = language
+        setContent(currentPage)
     }
     setContent('about');
 </script>
